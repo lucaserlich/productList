@@ -1,0 +1,18 @@
+<div class="result-obj" *ngIf="product">
+
+  <div class="name-obj">
+    {{product.productName}}
+  </div>
+
+  <div class="description-obj">
+    {{product.description}}
+  </div>
+
+  <div class="target-obj">
+    <span class="target-tag" *ngFor="let targetMarket of product.targetMarket">{{targetMarket}}</span>
+  </div>
+
+  <div class="stack-obj">
+    <span class="stack-tag" *ngFor="let stack of product.stack">{{stack}}</span>
+  </div>
+</div>

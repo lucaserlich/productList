@@ -1,0 +1,12 @@
+<div>
+  <form>
+    <div class="input-label">Filtrar por tecnologias e mercado alvo</div>
+    <input placeholder="Palavra Chave" type="text" class="input-text" #keywordRef id="keyword" required [(ngModel)]="keyword"
+      name="keyword">
+  </form>
+</div>
+<product-list [products]='products'></product-list>
+
+<div *ngIf="products ? products.length < 1 : true">
+  <h4 style="text-align: center;">Nenhum resultado encontrado</h4>
+</div>
